@@ -1,27 +1,17 @@
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import AppRouter from ".//Routes/index.routes";
 import './App.css'
-import Navbar from './components/Navbar'
-import Footer from './components/Footer'
-import Home from './pages/homePage/Home.jsx'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-
 function App() {
-  
+  const isAdmin = false; // later: dynamic login
 
   return (
-    <>
-      <div className="app">
-      {/* Navigation */}
-      <Navbar />
-
-      <Home />
-
-      {/* Footer */}
+    <div className="app">
+      <Navbar isAdmin={isAdmin} />
+      <AppRouter isAdmin={isAdmin} />
       <Footer />
-
-      
     </div>
-    </>
-  )
+  );
 }
 
-export default App
+export default App;
