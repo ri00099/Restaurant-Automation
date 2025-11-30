@@ -6,7 +6,6 @@
   right: 0;
   width: 100%;
   background-color: #E9F0F4;
-  /* border-bottom: 2px solid #c7d2fe; */
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   z-index: 9999;
 }
@@ -24,7 +23,6 @@
   justify-content: space-between;
   align-items: center;
   height: 6rem;
-
 }
 
 /* Logo Styles */
@@ -62,10 +60,9 @@
   display: none;
   gap: 4rem;
   align-items: center;
-
 }
 
-.navFlex{
+.navFlex {
   display: flex;
   justify-content: space-between;
   gap: 9rem;
@@ -83,6 +80,41 @@
 
 .nav-link:hover {
   color: #6366f1;
+}
+
+/* Cart Link Styles */
+.cart-link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.cart-badge {
+  position: absolute;
+  top: -8px;
+  right: -12px;
+  background-color: #ff4444;
+  color: white;
+  border-radius: 50%;
+  padding: 0.2rem 0.5rem;
+  font-size: 0.75rem;
+  font-weight: bold;
+  min-width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: scaleIn 0.3s ease;
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
 }
 
 /* Mobile Menu Button */
@@ -151,6 +183,28 @@
   background-color: #eef2ff;
 }
 
+/* Mobile Cart Link */
+.cart-link-mobile {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.cart-badge-mobile {
+  background-color: #ff4444;
+  color: white;
+  border-radius: 50%;
+  padding: 0.2rem 0.5rem;
+  font-size: 0.75rem;
+  font-weight: bold;
+  min-width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+}
 
 /* Small Mobile Styles */
 @media (max-width: 480px) {
