@@ -4,7 +4,7 @@ const OurPassion = () => {
   return (
     <>
     <section className="about-section">
-        <h2>Our Passion for Perfect Dining</h2>
+        <h2 className="page-title">Our Passion for Perfect Dining</h2>
         <p className="about-text">
           At FoodFlow, we blend exceptional cuisine with seamless dining efficiency.
           Our mission is to create an unforgettable experience—from kitchen precision 

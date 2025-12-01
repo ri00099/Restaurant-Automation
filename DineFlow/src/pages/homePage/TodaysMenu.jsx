@@ -40,7 +40,7 @@ const TodaysMenu = () => {
 
   return (
     <section className="specials-section">
-      <h2>Today's Irresistible Specials</h2>
+      <h2 className="page-title">Today's Irresistible Specials</h2>
 
       <div className="specials-grid">
         {specialFood.map((item) => (

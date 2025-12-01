@@ -9,7 +9,7 @@ import Cart from "../pages/cartPage/Cart";
 
 // Admin Pages
 import Kitchen from "../pages/kitchenDashBoardPage/Kitchen";
-import Admin from "../pages/adminDashBoard/Admin";
+import Admin from "../pages/adminDashBoard/admin";
 
 export default function Index({ isAdmin }) {
   return (

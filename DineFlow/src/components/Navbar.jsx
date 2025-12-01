@@ -25,7 +25,7 @@ export default function Navbar({ isAdmin = false }) {
   if (isAdmin) {
     navItems.splice(4, 0,
       { name: "Kitchen", path: "/kitchen" },
-      { name: "Admin", path: "/dashboard" }
+      { name: "Admin", path: "/admin" }
     );
   }
 
