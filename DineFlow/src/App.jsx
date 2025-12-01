@@ -6,7 +6,7 @@ import { ToastProvider } from "./components/ToastContainer";
 import './App.css';
 
 function App() {
-  const isAdmin = false; // later: dynamic login
+  const isAdmin = true; // later: dynamic login
 
   return (
     <CartProvider>

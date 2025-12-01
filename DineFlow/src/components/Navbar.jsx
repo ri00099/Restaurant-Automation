@@ -2,12 +2,13 @@ import { useState } from "react";
 import { Menu, X, UtensilsCrossed } from "lucide-react";
 import { GiShoppingCart } from "react-icons/gi";
 import { Link } from "react-router-dom";
-import { useCart } from "../context/CartContext"; // Import useCart hook
+import { useCart } from "../context/CartContext";
 import "../style/Navbar.css";
+import logo from "../assets/Graphura logo Black.png"
 
 export default function Navbar({ isAdmin = false }) {
   const [isOpen, setIsOpen] = useState(false);
-  const { getCartCount } = useCart(); // Get cart count
+  const { getCartCount } = useCart();
   const cartCount = getCartCount();
 
   const navItems = [
@@ -17,9 +18,10 @@ export default function Navbar({ isAdmin = false }) {
     { name: "Contact", path: "/contact" },
   ];
 
-  // Add admin items conditionally
   if (isAdmin) {
-    navItems.splice(4, 0,
+    navItems.splice(
+      4,
+      0,
       { name: "Kitchen", path: "/kitchen" },
       { name: "Admin", path: "/dashboard" }
     );
@@ -29,16 +31,12 @@ export default function Navbar({ isAdmin = false }) {
     <nav className="navbar">
       <div className="navbar-container">
         <div className="navbar-content">
-          
           {/* Logo */}
           <div className="navbar-logo">
-            <div className="logo-icon">
-              <UtensilsCrossed className="icon" />
-            </div>
-            <span className="logo-text">DineFlow</span>
+            <img src={logo} alt="" />
           </div>
 
-          {/* Desktop Menu */}
+          {/* Desktop Navigation */}
           <div className="navFlex">
             <div className="navbar-menu">
               {navItems.map((item) => (
@@ -51,25 +49,24 @@ export default function Navbar({ isAdmin = false }) {
                 </Link>
               ))}
             </div>
-            
-            <div className="navbar-menu">
-              <Link
-                to="/cart"
-                className="nav-link cart-link flex items-center gap-2"
-              >
-                <GiShoppingCart size={26} className="cart-icon" />
-                {cartCount > 0 && (
-                  <span className="cart-badge">{cartCount}</span>
-                )}
-              </Link>
-            </div>
           </div>
 
-          {/* Mobile Menu Button */}
+          {/* Always-visible Cart Icon */}
+          <div className="navbar-container-second">
+
+          <div className="cart-icon-wrapper">
+            <Link to="/cart" className="nav-link cart-link flex items-center gap-2">
+              <GiShoppingCart size={26} className="cart-icon" />
+              {cartCount > 0 && <span className="cart-badge">{cartCount}</span>}
+            </Link>
+          </div>
+
+          {/* Mobile Menu Toggle */}
           <div className="mobile-menu-button">
             <button onClick={() => setIsOpen(!isOpen)} className="menu-toggle">
               {isOpen ? <X className="icon" /> : <Menu className="icon" />}
             </button>
+          </div>
           </div>
         </div>
 
@@ -87,17 +84,6 @@ export default function Navbar({ isAdmin = false }) {
                   {item.icon ? item.icon : item.name}
                 </Link>
               ))}
-              <Link
-                to="/cart"
-                className="mobile-nav-link cart-link-mobile flex items-center gap-2"
-                onClick={() => setIsOpen(false)}
-              >
-                <GiShoppingCart size={24} className="cart-icon" />
-                <span>Cart</span>
-                {cartCount > 0 && (
-                  <span className="cart-badge-mobile">{cartCount}</span>
-                )}
-              </Link>
             </div>
           </div>
         )}
