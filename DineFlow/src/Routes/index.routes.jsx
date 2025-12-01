@@ -2,8 +2,8 @@ import { Routes, Route } from "react-router-dom";
 
 // Pages
 import Home from "../pages/homePage/Home";
-import Menu from "../pages/menuPage/Menu";
-import Order from "../pages/orderPage/Order";
+import Menu from "../pages/menuPage/Menu.jsx";
+import OrderTracking from "../pages//orderConfirmationPage/OrderTracking.jsx";
 import Contact from "../pages/contactAndFeedback/Contact";
 import Cart from "../pages/cartPage/Cart";
 
@@ -17,7 +17,7 @@ export default function Index({ isAdmin }) {
       {/* Public Routes */}
       <Route path="/" element={<Home />} />
       <Route path="/menu" element={<Menu />} />
-      <Route path="/order" element={<Order />} />
+      <Route path="/order-tracking/:orderId" element={<OrderTracking />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/cart" element={<Cart />} />
 
@@ -34,3 +34,4 @@ export default function Index({ isAdmin }) {
     </Routes>
   );
 }
+

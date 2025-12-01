@@ -5,7 +5,7 @@ import "../../style/homePage/Feedback.css";
   const testimonials = [
     {
       id: 1,
-      text: "DineFlow has completely transformed our operations. Orders are smoother, and our kitchen staff loves real-time tracking. Highly recommend!",
+      text: "It has completely transformed our operations. Orders are smoother, and our kitchen staff loves real-time tracking. Highly recommend!",
       name: "Alice Johnson",
       role: "Restaurant Owner",
       avatar: "https://i.pravatar.cc/150?u=alice",
@@ -19,7 +19,7 @@ import "../../style/homePage/Feedback.css";
     },
     {
       id: 3,
-      text: "Efficiency is key in our diner, and DineFlow delivers. Billing is quick and dashboards give great insights.",
+      text: "Efficiency is key in our diner, and it delivers. Billing is quick and dashboards give great insights.",
       name: "Charlie Davis",
       role: "Operations Manager",
       avatar: null,

@@ -1,0 +1,206 @@
+export const menuItems = [
+  {
+    id: 1,
+    name: "Classic Cheeseburger",
+    category: "Main Courses",
+    price: 12.99,
+    image:
+      "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400&h=300&fit=crop",
+    description:
+      "Juicy beef patty, cheddar cheese, fresh lettuce, tomato, onion, with pickles on a toasted sesame bun.",
+    ingredients: [
+      "Beef Patty",
+      "Cheddar Cheese",
+      "Lettuce",
+      "Tomato",
+      "Onion",
+      "Pickles",
+      "Sesame Bun",
+    ],
+    rating: 4.5,
+    reviews: 128,
+    prepTime: "15-20 min",
+    popularity: 95,
+  },
+  {
+    id: 2,
+    name: "Spicy Chicken Wings",
+    category: "Appetizers",
+    price: 9.5,
+    image:
+      "https://images.unsplash.com/photo-1608039829572-78524f79c4c7?w=400&h=300&fit=crop",
+    description:
+      "Crispy chicken wings tossed in a fiery buffalo sauce, served with cool ranch dipping sauce.",
+    ingredients: [
+      "Chicken Wings",
+      "Buffalo Sauce",
+      "Ranch Dressing",
+      "Celery",
+      "Spices",
+    ],
+    rating: 4.7,
+    reviews: 256,
+    prepTime: "20-25 min",
+    popularity: 88,
+  },
+  {
+    id: 3,
+    name: "Vegetable Lasagna",
+    category: "Main Courses",
+    price: 14.75,
+    image:
+      "https://images.unsplash.com/photo-1574894709920-11b28e7367e3?w=400&h=300&fit=crop",
+    description:
+      "Layers of pasta, rich marinara sauce, fresh vegetables, and seasonal vegetables, baked to perfection.",
+    ingredients: [
+      "Lasagna Pasta",
+      "Marinara Sauce",
+      "Zucchini",
+      "Spinach",
+      "Ricotta",
+      "Mozzarella",
+    ],
+    rating: 4.3,
+    reviews: 89,
+    prepTime: "25-30 min",
+    popularity: 72,
+  },
+  {
+    id: 4,
+    name: "Chocolate Lava Cake",
+    category: "Desserts",
+    price: 7.0,
+    image:
+      "https://images.unsplash.com/photo-1624353365286-3f8d62daad51?w=400&h=300&fit=crop",
+    description:
+      "Warm, rich chocolate cake with a molten center, topped with a scoop of vanilla ice cream.",
+    ingredients: [
+      "Dark Chocolate",
+      "Butter",
+      "Eggs",
+      "Sugar",
+      "Flour",
+      "Vanilla Ice Cream",
+    ],
+    rating: 4.9,
+    reviews: 342,
+    prepTime: "10-12 min",
+    popularity: 98,
+  },
+  {
+    id: 5,
+    name: "Fresh Orange Juice",
+    category: "Beverages",
+    price: 6.0,
+    image:
+      "https://images.unsplash.com/photo-1600271886742-f049cd451bba?w=400&h=300&fit=crop",
+    description:
+      "Freshly squeezed orange juice and citrus goodness in every sip.",
+    ingredients: ["Fresh Oranges", "Ice"],
+    rating: 4.6,
+    reviews: 167,
+    prepTime: "5 min",
+    popularity: 85,
+  },
+  {
+    id: 6,
+    name: "Grilled Salmon with Asparagus",
+    category: "Main Courses",
+    price: 18.99,
+    image:
+      "https://images.unsplash.com/photo-1467003909585-2f8a72700288?w=400&h=300&fit=crop",
+    description:
+      "Perfectly grilled salmon fillet, seasoned with herbs, served with roasted asparagus and lemon.",
+    ingredients: [
+      "Salmon Fillet",
+      "Asparagus",
+      "Lemon",
+      "Herbs",
+      "Olive Oil",
+      "Garlic",
+    ],
+    rating: 4.8,
+    reviews: 203,
+    prepTime: "18-22 min",
+    popularity: 91,
+  },
+  {
+    id: 7,
+    name: "Caesar Salad",
+    category: "Appetizers",
+    price: 8.75,
+    image:
+      "https://images.unsplash.com/photo-1546793665-c74683f339c1?w=400&h=300&fit=crop",
+    description:
+      "Fresh romaine lettuce, crunchy croutons, parmesan cheese, and creamy Caesar dressing.",
+    ingredients: [
+      "Romaine Lettuce",
+      "Croutons",
+      "Parmesan",
+      "Caesar Dressing",
+      "Anchovies",
+    ],
+    rating: 4.4,
+    reviews: 145,
+    prepTime: "8-10 min",
+    popularity: 79,
+  },
+  {
+    id: 8,
+    name: "New York Cheesecake",
+    category: "Desserts",
+    price: 8.5,
+    image:
+      "https://images.unsplash.com/photo-1533134486753-c833f0ed4866?w=400&h=300&fit=crop",
+    description:
+      "Classic rich and creamy cheesecake on a graham cracker crust, topped with strawberry compote.",
+    ingredients: [
+      "Cream Cheese",
+      "Graham Crackers",
+      "Sugar",
+      "Eggs",
+      "Vanilla",
+      "Strawberries",
+    ],
+    rating: 4.7,
+    reviews: 298,
+    prepTime: "12-15 min",
+    popularity: 94,
+  },
+  {
+    id: 9,
+    name: "Sparkling Water",
+    category: "Beverages",
+    price: 3.0,
+    image:
+      "https://plus.unsplash.com/premium_photo-1687354256687-b5ee47c043c1?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c3BhcmtsaW5nJTIwd2F0ZXJ8ZW58MHx8MHx8fDA%3D",
+    description:
+      "Crisp and effervescent sparkling water served with a slice of lime.",
+    ingredients: ["Sparkling Water", "Lime"],
+    rating: 4.2,
+    reviews: 87,
+    prepTime: "2 min",
+    popularity: 65,
+  },
+  {
+    id: 10,
+    name: "Truffle Fries",
+    category: "Appetizers",
+    price: 7.25,
+    image:
+      "https://images.unsplash.com/photo-1573080496219-bb080dd4f877?w=400&h=300&fit=crop",
+    description:
+      "Golden crispy french fries tossed with truffle oil, parmesan cheese, and fresh herbs.",
+    ingredients: [
+      "Potatoes",
+      "Truffle Oil",
+      "Parmesan",
+      "Fresh Herbs",
+      "Sea Salt",
+    ],
+    rating: 4.6,
+    reviews: 219,
+    prepTime: "12-15 min",
+    popularity: 87,
+  },
+];

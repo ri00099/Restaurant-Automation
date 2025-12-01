@@ -1,0 +1,17 @@
+.searchbar-wrapper {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.searchbar-input {
+  width: 100%;
+  padding: 14px 16px;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  font-size: 15px;
+}
+
+.searchbar-input:focus {
+  outline: none;
+  border-color: #4f46e5;
+}

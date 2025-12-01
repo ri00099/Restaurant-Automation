@@ -1,11 +1,12 @@
 import { UtensilsCrossed, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
 import '../style/Footer.css';
+import logo from "../assets/Graphura logo Black.png"
 
 export default function Footer() {
   const companyLinks = [
     { name: 'About Us', href: '#about' },
-    { name: 'Careers', href: '#careers' },
-    { name: 'Blog', href: '#blog' }
+    { name: 'Why Choose Us', href: '#careers' },
+    { name: 'Our Story', href: '#blog' }
   ];
 
   const supportLinks = [
@@ -34,10 +35,7 @@ export default function Footer() {
           {/* Brand Section */}
           <div className="footer-brand">
             <div className="footer-logo">
-              <div className="logo-icon">
-                <UtensilsCrossed className="icon" />
-              </div>
-              <span className="logo-text">DineFlow</span>
+              <img src={logo} alt="" />
             </div>
             <p className="footer-description semi-bold">
               Modernizing restaurant operations with digital solutions.
@@ -105,7 +103,7 @@ export default function Footer() {
         {/* Copyright */}
         <div className="footer-bottom">
           <p className="copyright">
-            © 2025 DineFlow. All rights reserved.
+            © 2025 Graphura. All rights reserved.
           </p>
         </div>
       </div>
