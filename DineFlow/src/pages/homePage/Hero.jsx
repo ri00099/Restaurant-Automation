@@ -16,8 +16,7 @@ const Hero = () => {
                 </h1>
 
                 <p>
-                    Experience culinary excellence with DineFlow, your ultimate partner in
-                    modern restaurant management and delightful dining.
+                    Experience culinary excellence with your ultimate partner in modern restaurant management and delightful dining.
                 </p>
 
                 <div className="buttons">

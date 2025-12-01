@@ -1,29 +1,27 @@
 import { useState } from "react";
 import { Menu, X, UtensilsCrossed } from "lucide-react";
-import "../style/Navbar.css";
 import { GiShoppingCart } from "react-icons/gi";
 import { Link } from "react-router-dom";
+import { useCart } from "../context/CartContext";
+import "../style/Navbar.css";
+import logo from "../assets/Graphura logo Black.png"
 
 export default function Navbar({ isAdmin = false }) {
   const [isOpen, setIsOpen] = useState(false);
+  const { getCartCount } = useCart();
+  const cartCount = getCartCount();
 
   const navItems = [
     { name: "Home", path: "/" },
     { name: "Menu", path: "/menu" },
-    { name: "Order", path: "/order" },
+    { name: "Orders", path: "/order" },
     { name: "Contact", path: "/contact" },
   ];
-  const cartLink = [
-    {
-      name: "",
-      path: "/cart",
-      icon: <GiShoppingCart size={26} className="cart-icon" />,
-    },
-  ]
 
-  // Add admin items conditionally
   if (isAdmin) {
-    navItems.splice(4, 0,
+    navItems.splice(
+      4,
+      0,
       { name: "Kitchen", path: "/kitchen" },
       { name: "Admin", path: "/dashboard" }
     );
@@ -33,47 +31,42 @@ export default function Navbar({ isAdmin = false }) {
     <nav className="navbar">
       <div className="navbar-container">
         <div className="navbar-content">
-          
           {/* Logo */}
           <div className="navbar-logo">
-            <div className="logo-icon">
-              <UtensilsCrossed className="icon" />
-            </div>
-            <span className="logo-text">DineFlow</span>
+            <img src={logo} alt="" />
           </div>
 
-          {/* Desktop Menu */}
+          {/* Desktop Navigation */}
           <div className="navFlex">
             <div className="navbar-menu">
               {navItems.map((item) => (
-              <Link
-                key={item.path}
-                to={item.path}
-                className="nav-link flex items-center gap-2"
-              >
-                {item.icon ? item.icon : item.name}
-              </Link>
-            ))}
+                <Link
+                  key={item.path}
+                  to={item.path}
+                  className="nav-link flex items-center gap-2"
+                >
+                  {item.icon ? item.icon : item.name}
+                </Link>
+              ))}
             </div>
-            
-          <div className="navbar-menu">
-            {cartLink.map((item) => (
-              <Link
-              key={item.path}
-              to={item.path}
-              className="nav-link flex items-center gap-2"
-              >
-                {item.icon ? item.icon : item.name}
-              </Link>
-            ))}
           </div>
-            </div>
 
-          {/* Mobile Menu Button */}
+          {/* Always-visible Cart Icon */}
+          <div className="navbar-container-second">
+
+          <div className="cart-icon-wrapper">
+            <Link to="/cart" className="nav-link cart-link flex items-center gap-2">
+              <GiShoppingCart size={26} className="cart-icon" />
+              {cartCount > 0 && <span className="cart-badge">{cartCount}</span>}
+            </Link>
+          </div>
+
+          {/* Mobile Menu Toggle */}
           <div className="mobile-menu-button">
             <button onClick={() => setIsOpen(!isOpen)} className="menu-toggle">
               {isOpen ? <X className="icon" /> : <Menu className="icon" />}
             </button>
+          </div>
           </div>
         </div>
 
